@@ -7,14 +7,6 @@
  */
 
 get_header();
-
-if (is_page('glosario')) {
-    get_template_part( 
-        'template-parts/category-list/category-list-costum', 
-        null, 
-        $args = [ 'menu_slug' => 'menu_category_one'] 
-    );
-}
 ?>
 
 <section class="m-page">
