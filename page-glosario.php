@@ -29,16 +29,20 @@ get_template_part(
                 ?> 
                 <div class="m-glosario__nav">
                     <h1 class="m-glosario__title"><?php the_title(); ?></h1>
-                    <h6 class="m-glosario__sub">Orden alfábetico</h6>
-                    <div class="m-glosario__anchors">
-                    <?php
-                    $Abecedario = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
+                    <div class="m-glosario__container">
+                        
+                        <h6 class="m-glosario__sub">Orden alfábetico</h6>
 
-                    foreach ($Abecedario as $letra) {
-                        echo '<a href="#' . strtoupper($letra) . '" class="m-glosario__link">' . strtoupper($letra) . '</a>' ;
-                    }
-                            
-                    ?> 
+                        <div class="m-glosario__anchors">
+                            <?php
+                            $Abecedario = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
+
+                            foreach ($Abecedario as $letra) {
+                                echo '<a href="#' . strtoupper($letra) . '" class="m-glosario__link">' . strtoupper($letra) . '</a>' ;
+                            } 
+                            ?>
+                        </div>
+
                     </div>
                 </div>
 
