@@ -18,7 +18,7 @@ get_template_part(
 ?>
 
 <section class="m-page -glosario">
-    <div class="m-glosario">
+    <div class="m-glosario -openNavGlossary" id="glossary">
         <?php
         
         if (have_posts()) {
@@ -31,9 +31,9 @@ get_template_part(
                     <h1 class="m-glosario__title"><?php the_title(); ?></h1>
                     <div class="m-glosario__container">
                         
-                        <h6 class="m-glosario__sub">Orden alfábetico</h6>
+                        <h6 class="m-glosario__sub" id="glossaryButton">Orden alfábetico</h6>
 
-                        <div class="m-glosario__anchors">
+                        <div class="m-glosario__anchors" id="glossaryBookmarks">
                             <?php
                             $Abecedario = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
 
