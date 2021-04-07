@@ -16,7 +16,7 @@ add_action('after_setup_theme', 'register_new_menu');
 
 
 function register_glossary_js() {
-    $vers = '1.2.0';
+    $vers = '1.2.1';
     if (is_page('glosario')) {
         wp_enqueue_script( 'glossary', get_theme_file_uri( '/assets/js/glossary.js' ), '', $vers, true );
     }
