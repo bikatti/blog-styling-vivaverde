@@ -16,9 +16,9 @@ add_action('after_setup_theme', 'register_new_menu');
 
 
 function register_glossary_js() {
-    $vers = '1.2.1';
+    $vers = '1.2.5';
 
-    wp_register_style( 'index', get_template_directory_uri( ).'/style.css', '', $ver, 'all' );
+    wp_register_style( 'index', get_template_directory_uri( ).'/style.css', '', $vers, 'all' );
 
     wp_enqueue_style( 'style', get_stylesheet_uri(  ) , array( 'index'), $ver, 'all' );
 

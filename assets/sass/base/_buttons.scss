@@ -2,3 +2,18 @@
 #                 Botón
 -------------------------------------- */
 
+.m-form__button {
+    color: $color-lightin;
+    padding: $spaceXs 28px;
+    border-radius: $spaceMd;
+    background-color: $color-primary;
+    transition: background-color .24s cubic-bezier(.215,.61,.355,1),color .24s cubic-bezier(.215,.61,.355,1);
+    cursor: pointer;
+    border: none;
+    transition: all .4s ease-out;
+    font-weight: 600;
+
+    &:hover {
+        box-shadow: 0 2px 6px rgba($color-primary, 60%);
+    }
+}

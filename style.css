@@ -12,6 +12,15 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 /* ------------------------------------
 #              Typography
 -------------------------------------- */
+label {
+  font-size: 16px;
+}
+@media only screen and (min-width: 768px) {
+  label {
+    font-size: 19px;
+  }
+}
+
 .-toggleItem, .m-glosario__link {
   transition: 0.4s;
   display: inline-block;
@@ -32,13 +41,19 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 /* ------------------------------------
 #                 Botón
 -------------------------------------- */
-/* -------------------------------------
- #                 Footer
- --------------------------------------- */
-.a-footer__copyright a {
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
-  color: #438a5e;
+.m-form__button {
+  color: #fefefe;
+  padding: 10px 28px;
+  border-radius: 30px;
+  background-color: #438a5e;
+  transition: background-color 0.24s cubic-bezier(0.215, 0.61, 0.355, 1), color 0.24s cubic-bezier(0.215, 0.61, 0.355, 1);
+  cursor: pointer;
+  border: none;
+  transition: all 0.4s ease-out;
+  font-weight: 600;
+}
+.m-form__button:hover {
+  box-shadow: 0 2px 6px rgba(67, 138, 94, 0.6);
 }
 
 /* -------------------------------------
@@ -206,4 +221,64 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
     padding: 20px 15px;
     padding-left: 20px;
   }
+}
+
+/* -------------------------------------
+ #              Page Contact
+ --------------------------------------- */
+.-contact .m-page__card {
+  margin: 0;
+  width: auto;
+  padding: 30px 0;
+  background-color: transparent;
+  border-radius: 0;
+}
+@media only screen and (max-width: 768px) {
+  .-contact .m-page__card {
+    padding: 0;
+  }
+  .-contact .m-page__title {
+    margin-top: 0;
+  }
+}
+
+.m-form__contact label {
+  width: 100%;
+}
+.m-form__contact label input, .m-form__contact label textarea {
+  width: 100%;
+  font-weight: 400;
+  display: block;
+  width: 100%;
+  padding: 15px calc(15px + 5px);
+  height: 50px;
+  background-color: #fefefe;
+  background-clip: padding-box;
+  border: 1px solid #dddce0;
+  border-radius: 5px;
+  margin-top: 7px;
+  margin-bottom: 15px;
+  transition: all 0.3s;
+}
+.m-form__contact label input:focus, .m-form__contact label input:hover, .m-form__contact label textarea:focus, .m-form__contact label textarea:hover {
+  outline: 0;
+  border-color: #438a5e;
+  box-shadow: 0 12px 14px rgba(70, 69, 71, 0.1);
+}
+.m-form__contact label textarea {
+  height: 140px;
+}
+@media only screen and (min-width: 768px) {
+  .m-form__contact {
+    margin-top: 90px;
+  }
+}
+
+/* -------------------------------------
+ #                 Footer
+ --------------------------------------- */
+.a-footer__copyright a {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  color: #438a5e;
 }

@@ -1,0 +1,58 @@
+/* -------------------------------------
+ #              Page Contact
+ --------------------------------------- */
+
+.-contact {
+    .m-page__card {
+        margin: 0;
+        width: auto;
+        padding: $spaceMd 0;
+        background-color: transparent;
+        border-radius: 0;
+    }
+
+    @include mediaQueriesMd {
+        .m-page__card {
+            padding: 0;
+        }
+        .m-page__title {
+            margin-top: 0;
+        }
+    }
+}
+
+.m-form__contact {
+    label {
+        width: 100%;
+
+        input,textarea {
+            width: 100%;
+            font-weight: 400;
+            display: block;
+            width: 100%;
+            padding: 15px calc(15px + 5px);
+            height: 50px;
+            background-color: $color-lightin;
+            background-clip: padding-box;
+            border: 1px solid $color-grey;
+            border-radius: $space0;
+            margin-top: $spaceXxs;
+            margin-bottom: $spaceSm;
+            transition: all 0.3s;
+
+            &:focus, &:hover {
+                outline: 0;
+                border-color: $color-primary;
+                box-shadow: 0 12px 14px rgba($color-black, .1);
+            }
+        }
+
+        textarea {
+            height: 140px;
+        }
+    }
+
+    @include mediaQueriesMinMd {
+        margin-top: $spaceMega;
+    }
+}

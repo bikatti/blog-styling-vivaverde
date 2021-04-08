@@ -2,6 +2,14 @@
 #              Typography
 -------------------------------------- */
 
+label {
+    font-size: $fontP;
+
+    @include mediaQueriesMinMd {
+        font-size: $fontSuperXs;
+    }
+}
+
 // Toggle
 .-toggleItem {
     transition: 0.4s;
