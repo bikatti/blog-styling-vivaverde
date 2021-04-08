@@ -1,0 +1,171 @@
+/* ------------------------------------
+ # Wordpress content Glosario page
+ -------------------------------------- */
+
+.m-glosario {
+    @include mediaQueriesMinMd {
+        display: grid;
+        grid-auto-flow: row;
+        grid-auto-columns: minmax(200px, auto);
+        grid-column-gap: $space25;
+        grid-template-columns: minmax(100px, auto) repeat(auto-fit, minmax(600px, auto));
+        grid-template-rows: auto auto;
+    }
+}
+
+.-glosario {
+    position: relative;
+    width: 100%;
+    max-width: 1360px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0 $spaceRg;
+
+    &.m-page {
+        margin-top: 0;
+    }
+
+    &.m-page .m-single__content p, &.m-page .m-single__content figcaption,
+    &.m-page .m-single__content ul, &.m-page .m-single__content ol,
+    &.m-page .m-single__content table, &.m-page .m-single__content h1,
+    &.m-page .m-single__content h2, &.m-page .m-single__content h3,
+    &.m-page .m-single__content h4, &.m-page .m-single__content h5,
+    &.m-page .m-single__content h6 {
+        max-width: 100%;
+        scroll-margin-top: 90px;
+    }
+
+    @include mediaQueriesMinMd {
+        padding: 0 100px;
+    }
+}
+
+.m-glosario__nav {
+    @include mediaQueriesMinMd {
+        align-self: start;
+        position: sticky;
+        top: 100px;
+    }
+}
+
+.m-glosario__container {
+    position: fixed;
+    bottom: 20px;
+    z-index: $friend;
+
+    .m-glosario__close {
+        border: none;
+        background: none;
+        position: absolute;
+        top: 5px;
+        right: 20px;
+        z-index: $guest;
+        display: none;
+    }
+    
+    @include mediaQueriesMd {
+        overflow: hidden;
+        padding: $space0 0;
+        background-color: $color-grey;
+        box-shadow: 0 5px 8px rgba($color-darkgrey, $alpha: .5);
+        border-radius: 100px;
+        display: block;
+        width: calc(100% - 40px);
+
+        .-openNavGlossary & {
+            padding: $spaceSm $spaceSm $spaceXs;
+            border-radius: $spaceMd;
+        }
+
+        .-openNavGlossary & .m-glosario__close {
+            display: block;
+            top: auto;
+            bottom: 20px;
+
+            span {
+                font-size: 20px;
+                font-weight: 600;
+                border-bottom: 1px solid;
+            }
+        }
+    }
+
+    @include mediaQueriesMinMd {
+        position: static;
+    }
+}
+
+.m-glosario__sub {
+    margin: $spaceXs 0;
+    text-transform: uppercase;
+    letter-spacing: .9px;
+
+    &.-desktop {
+        display: none;
+    }
+
+    @include mediaQueriesMd {
+        text-align: center;
+        font-size: $fontSuperXs;
+        position: static;
+        opacity: 1;
+        @include weight(6);
+        transform: all .4s;
+
+        .-openNavGlossary & {
+            position: absolute;
+            left: -100vw;
+            opacity: 0;
+        }
+    }
+
+    @include mediaQueriesMinMd {
+        &.-mobile {
+            display: none;
+        }
+
+        &.-desktop {
+            display: block;
+        }
+    }
+}
+
+.m-glosario__anchors {
+    display: none;
+
+    .-openNavGlossary & {
+        display: block;
+    }
+
+    @include mediaQueriesMinMd {
+        display: block;
+        margin-top: $spaceRg;
+    }
+}
+
+.m-glosario__link {
+    @extend .-toggleItem;
+    line-height: 1;
+    padding: $space0 $spaceSm;
+    margin-right: 12px;
+    height: auto;
+
+    .-openNavGlossary & {
+        padding-top: 6px;
+        padding-bottom: 6px;
+        padding: $space0 14px;
+        font-weight: 600;
+    }
+}
+
+/* ------------ Bloque de glosario ------------ */
+.wp-block-gutenberg-glosasrio-block {
+    @include mediaQueriesSm {
+        .theBody & {
+            padding: $spaceRg $spaceSm;
+            padding-left: $spaceRg;
+        }
+    }
+}
+
+// 172.22.88.215

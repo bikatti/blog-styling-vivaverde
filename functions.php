@@ -17,6 +17,11 @@ add_action('after_setup_theme', 'register_new_menu');
 
 function register_glossary_js() {
     $vers = '1.2.1';
+
+    wp_register_style( 'index', get_template_directory_uri( ).'/style.css', '', $ver, 'all' );
+
+    wp_enqueue_style( 'style', get_stylesheet_uri(  ) , array( 'index'), $ver, 'all' );
+
     if (is_page('glosario')) {
         wp_enqueue_script( 'glossary', get_theme_file_uri( '/assets/js/glossary.js' ), '', $vers, true );
     }

@@ -1,0 +1,10 @@
+/* -------------------------------------
+ #                 Footer
+ --------------------------------------- */
+
+.a-footer__copyright {
+    a {
+        @include weight(5);
+        color: $color-primary;
+    }
+}

@@ -1,0 +1,25 @@
+/*
+Theme Name: Blog Styling Vivaverde
+Theme URI: http://raiolanetworks.es
+Description: Blog Styling Version for Vivaverde Theme
+Author: Bikatti
+Template: blog-styling
+Version: 1.3.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+*/
+
+// lib
+@import "lib/var";
+@import "lib/mixin";
+
+// base
+@import "base/typography";
+@import "base/links";
+@import "base/buttons";
+@import "base/icons";
+
+// components changes
+@import "components/footer";
+@import "components/changes";
+@import "components/glosario";
