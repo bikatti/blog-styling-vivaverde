@@ -30,7 +30,7 @@ get_header();
                 ?>
             </div>
 
-            <div class="-col-8">
+            <div class="-col-7">
                 <div class="m-form__contact">
                     <?php echo do_shortcode('[contact-form-7 id="104" title="Formulario de contacto de la página"]') ?>
                 </div>

@@ -16,7 +16,7 @@ add_action('after_setup_theme', 'register_new_menu');
 
 
 function register_glossary_js() {
-    $vers = '1.2.5';
+    $vers = '1.3.1';
 
     wp_register_style( 'index', get_template_directory_uri( ).'/style.css', '', $vers, 'all' );
 
@@ -43,3 +43,15 @@ function login_logo_resize() {
 <?php }
 
 add_action( 'login_enqueue_scripts', 'login_logo_resize' );
+
+
+// Register Theme Features
+function custom_theme_features()  {
+
+	// Add theme support for Post Formats
+	add_theme_support( 'post-formats', array( 'status' ) );
+
+	// Add theme support for custom CSS in the TinyMCE visual editor
+	add_editor_style();
+}
+add_action( 'after_setup_theme', 'custom_theme_features' );

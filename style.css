@@ -233,7 +233,13 @@ label {
   background-color: transparent;
   border-radius: 0;
 }
+.-contact .-col-7 {
+  margin-left: auto;
+}
 @media only screen and (max-width: 768px) {
+  .-contact {
+    margin-top: 90px;
+  }
   .-contact .m-page__card {
     padding: 0;
   }

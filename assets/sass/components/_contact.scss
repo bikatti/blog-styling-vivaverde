@@ -11,7 +11,12 @@
         border-radius: 0;
     }
 
+    .-col-7 {
+        margin-left: auto;
+    }
+
     @include mediaQueriesMd {
+        margin-top: $spaceMega;
         .m-page__card {
             padding: 0;
         }
