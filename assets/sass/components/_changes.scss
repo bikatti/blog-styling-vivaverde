@@ -11,3 +11,16 @@
         }
     } 
 }
+
+.m-single__title {
+    @include mediaQueriesMinMd {
+        font-size: $fontXl;
+        margin-bottom: $spaceRg;
+    }
+}
+
+.m-single__excerpt {
+    @include mediaQueriesMinMd {
+        font-size: $fontSuperXs;
+    }
+}

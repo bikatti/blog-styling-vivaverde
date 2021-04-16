@@ -68,6 +68,19 @@ label {
   }
 }
 
+@media only screen and (min-width: 768px) {
+  .m-single__title {
+    font-size: 45px;
+    margin-bottom: 20px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .m-single__excerpt {
+    font-size: 19px;
+  }
+}
+
 /* ------------------------------------
  # Wordpress content Glosario page
  -------------------------------------- */
