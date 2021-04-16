@@ -17,6 +17,8 @@
 
     @include mediaQueriesMd {
         margin-top: $spaceMega;
+        margin-bottom: $spaceSuperXl;
+
         .m-page__card {
             padding: 0;
         }

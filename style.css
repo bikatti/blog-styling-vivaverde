@@ -239,6 +239,7 @@ label {
 @media only screen and (max-width: 768px) {
   .-contact {
     margin-top: 90px;
+    margin-bottom: 60px;
   }
   .-contact .m-page__card {
     padding: 0;
