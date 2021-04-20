@@ -112,6 +112,12 @@ label {
   margin-bottom: 10px;
 }
 
+@media only screen and (max-width: 768px) {
+  .m-biggerArticle__excerpt, .m-bigArticle__header .m-bigArticle__excerpt {
+    font-size: 19px;
+  }
+}
+
 /* ------------------------------------
  # Wordpress content Glosario page
  -------------------------------------- */

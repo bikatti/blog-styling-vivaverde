@@ -16,7 +16,7 @@ add_action('after_setup_theme', 'register_new_menu');
 
 
 function register_glossary_js() {
-    $vers = '1.4.11';
+    $vers = '1.4.13';
 
     wp_register_style( 'index', get_template_directory_uri( ).'/style.css', '', $vers, 'all' );
 
