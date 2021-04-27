@@ -16,7 +16,7 @@ add_action('after_setup_theme', 'register_new_menu');
 
 
 function register_glossary_js() {
-    $vers = '1.4.13';
+    $vers = '1.4.14';
 
     wp_register_style( 'index', get_template_directory_uri( ).'/style.css', '', $vers, 'all' );
 
@@ -26,8 +26,15 @@ function register_glossary_js() {
         wp_enqueue_script( 'glossary', get_theme_file_uri( '/assets/js/glossary.js' ), '', $vers, true );
     }
 }
-
 add_action( 'wp_enqueue_scripts', 'register_glossary_js' );
+
+function block_editor_css() {
+    $vers = '1.0.1';
+
+    wp_register_style( 'editor', get_template_directory_uri( ).'/editor-styles.css', '', $ver, 'all' );
+    wp_enqueue_style( 'editor-gutenberg', get_stylesheet_uri(  ) , array( 'editor' ), $ver, 'all' );
+}
+add_action( 'enqueue_block_editor_assets', 'block_editor_css' );
 
 
 /** -----------------------------------

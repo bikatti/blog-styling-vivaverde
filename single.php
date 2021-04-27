@@ -36,12 +36,14 @@ get_template_part(
 </section>
 
 <?php 
+    $title_random = get_theme_mod( 'title_random_posts_text', __( 'Artículos randoms' ) );
+
     get_template_part( 
         'template-parts/content/random-posts', 
         null, 
         $args = [
             'header_type' => '',
-            'view_title'  => 'Otros temas'
+            'view_title'  => $title_random
         ] 
     ); 
 ?>

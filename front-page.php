@@ -19,12 +19,14 @@ get_template_part(
 <div class="m-titleSite">
     <div class="-container">
         <?php
+            $title_home = get_theme_mod( 'h1_home_text', __( 'Título' ) );
+            
             get_template_part( 
                 'template-parts/front-page/view-lastest/header', 
                 null, 
                 $args = [
                     'header_type' => 'title_on_frontpage',
-                    'view_title' => 'InfoBlog'
+                    'view_title' => $title_home
                 ]
             );
         ?>
@@ -41,19 +43,21 @@ get_template_part(
     ] 
 );
 
+$title_three = get_option( 'title_third_block_text', __( 'Título' ) );
 get_template_part( 
     'template-parts/front-page/category/category-costum',
     null,
     $args = [
-        'title' => 'Métodos y Estudios'
+        'title' => $title_three
     ]
 );
 
+$title_four = get_option( 'title_fourth_block_text', __( 'Título' ) );
 get_template_part( 
     'template-parts/front-page/popular/popular',
     null,
     $args = [
-        'title' => 'Los más leídos'
+        'title' => $title_four
     ]
 );
 

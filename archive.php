@@ -58,13 +58,15 @@ $description = get_the_archive_description();
 <?php endif; ?>
 
 <?php 
+    $title_random = get_theme_mod( 'title_random_posts_text', __( 'Artículos randoms' ) );
+
     get_template_part( 
         'template-parts/content/random-posts', 
         null, 
         $args = [
             'className' => '-single',
             'header_type' => '',
-            'view_title'  => 'Otros temas'
+            'view_title'  => $title_random
         ] 
     ); 
 ?>

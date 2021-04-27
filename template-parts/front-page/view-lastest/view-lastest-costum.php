@@ -12,12 +12,13 @@
         <?php 
         get_template_part( 'template-parts/front-page/view-lastest/header', null, $args );
 
+        $title_two = get_option( 'title_second_block_text', __( 'Título' ) );
         get_template_part( 
             'template-parts/front-page/view-lastest/header',
             null, 
             $args = [
                 'header_type' => '',
-                'view_title'  => 'Áreas de Desarrollo'
+                'view_title'  => $title_two
             ] 
         );
         
