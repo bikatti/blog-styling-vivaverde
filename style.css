@@ -118,6 +118,13 @@ label {
   }
 }
 
+@media only screen and (max-width: 768px) {
+  .m-categoryList ul li {
+    font-size: 18px;
+    margin-right: 15px;
+  }
+}
+
 /* ------------------------------------
  # Wordpress content Glosario page
  -------------------------------------- */

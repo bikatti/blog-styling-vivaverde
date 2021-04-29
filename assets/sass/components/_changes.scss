@@ -73,3 +73,10 @@
         font-size: $fontSuperXs;
     }
 }
+
+.m-categoryList ul li {
+    @include mediaQueriesMd {
+        font-size: 18px;
+        margin-right: $spaceSm;
+    }
+}
